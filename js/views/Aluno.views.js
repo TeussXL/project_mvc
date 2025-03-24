@@ -4,6 +4,7 @@ class AlunoView {
         this.tableheader = table.querySelector('thead')
         this.tablebody = table.querySelector('tbody')
         this.materias = ["backend_1", "frontend_2", "bancodados", "ferramentas"]  
+        this.renderHeader()
     }
 
     renderHeader() {

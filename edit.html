@@ -114,7 +114,7 @@
 
     <script src="js/calc.js"></script>
     <script src="js/Models/Aluno.model.js"></script>
-    <script src="js/Services/Aluno.service.js"></script>
+    <script src="js/Services/Aluno.services.js"></script>
 
     <script>
       const alunos = [
@@ -137,7 +137,18 @@
           },
         },
       ];
-
+        const alunoService = new AlunoService();
+        alunos.forEach((aluno) => {
+            alunoService.add(new AlunoModel(aluno));
+        });
+        const paramsString = window.location.search;
+        console.log(paramsString);
+        const URLParams = new URLSearchParams(paramsString);
+        const alunoId = parseInt(URLParams.get('id'));
+        console.log(alunoId);
+        const aluno = alunoService.searchById(alunoId);
+        console.log(aluno);
+        
     </script>
   </body>
 </html>
