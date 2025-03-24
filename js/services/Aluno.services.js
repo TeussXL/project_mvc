@@ -1,15 +1,15 @@
 class AlunoService {
-    constructor(alunos) {
-        this.alunos = alunos
+    constructor() {
+        this.alunos = []
     }
-    addAluno(aluno) {
-        if(!note instanceof AlunoModel) {
+    add(aluno) {
+        if(!aluno instanceof AlunoModel) {
             throw new Error('Aluno precisa ser uma instância da classe AlunoModel')
         }
-        this.alunos.Push(aluno)
+        this.alunos.push(aluno)
     }
 
-    updateAluno(aluno) {
+    update(aluno) {
         return aluno
     }
 }
